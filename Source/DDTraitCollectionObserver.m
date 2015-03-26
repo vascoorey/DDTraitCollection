@@ -58,6 +58,8 @@
 #pragma mark Public API
 
 - (void)addObserver:(NSObject *)observer {
+    NSParameterAssert([observer respondsToSelector:@selector(traitCollectionDidChange:)]);
+
     typeof(observer) __weak weakObserver = observer;
     NSUInteger observerCount = self.observers.count;
 
@@ -90,9 +92,7 @@
     NSEnumerator *objectEnumerator = [self.observers objectEnumerator];
 
     for (NSObject<UITraitEnvironment> *observer in objectEnumerator) {
-        if ([observer respondsToSelector:@selector(traitCollectionDidChange:)]) {
-            [observer traitCollectionDidChange:traitCollection];
-        }
+        [observer traitCollectionDidChange:traitCollection];
     }
 }
 
