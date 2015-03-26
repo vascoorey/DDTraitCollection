@@ -7,7 +7,7 @@ The goal is to have some of the useful `UITraitCollection` API available to iOS 
 # API
 Currently the following API should be available to iOS 7:
 
-* `-traitCollection` - The current `UITraitCollection` for the `UIView` or `UIViewController`, on iOS 7 an instance of `DDTraitCollection` will be returned (it **should** be API-compatible with `UITraitCollection`)
+* `-traitCollection` - The current `UITraitCollection` for the `UIView` or `UIViewController`, on iOS 7 an instance of `DDTraitCollection` will be returned (it *should* be API-compatible with `UITraitCollection`)
 * `-traitCollectionDidChange:` - This method will be called in any iOS 7 `view` or `viewController` that has previously called `-dd_registerForTraitCollectionUpdates`
 
 # Example
