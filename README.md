@@ -31,3 +31,5 @@ Here is a quick example of how you could use this:
 
 # Warning
 If you need to create `UITraitCollection` instances in code shared between iOS7 and 8 you should do so via the `DDTraitCollection` class methods (using `UITraitCollection` in iOS 7 will just nil stuff out).
+
+In iOS 7 it will return an instance of `DDTraitCollection` whereas in iOS 8 it will correctly return `UITraitCollection` instances.
