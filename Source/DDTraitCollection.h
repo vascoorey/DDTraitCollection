@@ -18,6 +18,8 @@
 
 + (instancetype)traitCollectionForCurrentEnvironment;
 
++ (instancetype)traitCollectionForInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
+
 + (UITraitCollection *)traitCollectionWithUserInterfaceIdiom:(UIUserInterfaceIdiom)idiom;
 @property (nonatomic, readonly) UIUserInterfaceIdiom userInterfaceIdiom; // unspecified: UIUserInterfaceIdiomUnspecified
 

@@ -37,6 +37,7 @@
                                                  name:UIApplicationDidChangeStatusBarOrientationNotification
                                                object:nil];
 
+    [self refreshCurrentTraitCollection];
     [self performSelector:@selector(refreshCurrentTraitCollection) withObject:nil afterDelay:0];
 
     return self;

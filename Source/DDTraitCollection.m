@@ -70,12 +70,15 @@ static BOOL _iOS7;
 }
 
 + (instancetype)traitCollectionForCurrentEnvironment {
+    return [self traitCollectionForInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
+
++ (instancetype)traitCollectionForInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     UIUserInterfaceIdiom idiom = UI_USER_INTERFACE_IDIOM();
     CGFloat displayScale = [UIScreen mainScreen].scale;
     UIUserInterfaceSizeClass horizontalSizeClass = idiom == UIUserInterfaceIdiomPad ? UIUserInterfaceSizeClassRegular : UIUserInterfaceSizeClassCompact;
     UIUserInterfaceSizeClass verticalSizeClass = idiom == UIUserInterfaceIdiomPad ? UIUserInterfaceSizeClassRegular : ({
-        UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? UIUserInterfaceSizeClassRegular
-                                                                                                 : UIUserInterfaceSizeClassCompact;
+        UIInterfaceOrientationIsPortrait(interfaceOrientation) ? UIUserInterfaceSizeClassRegular : UIUserInterfaceSizeClassCompact;
     });
 
     return
