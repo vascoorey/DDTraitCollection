@@ -11,49 +11,62 @@
 @implementation DDTraitCollection
 
 #pragma mark -
+#pragma mark Class Loading
+
+static BOOL _iOS7;
+
++ (void)load {
+    _iOS7 = [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0;
+}
+
+#pragma mark -
 #pragma mark Class Methods
 
-+ (instancetype)traitCollectionWithUserInterfaceIdiom:(UIUserInterfaceIdiom)idiom {
-    return [[self alloc] initWithUserInterfaceIdiom:idiom];
++ (UITraitCollection *)traitCollectionWithUserInterfaceIdiom:(UIUserInterfaceIdiom)idiom {
+    return _iOS7 ? [[self alloc] initWithUserInterfaceIdiom:idiom] : [UITraitCollection traitCollectionWithUserInterfaceIdiom:idiom];
 }
 
-+ (instancetype)traitCollectionWithDisplayScale:(CGFloat)scale {
-    return [[self alloc] initWithDisplayScale:scale];
++ (UITraitCollection *)traitCollectionWithDisplayScale:(CGFloat)scale {
+    return _iOS7 ? [[self alloc] initWithDisplayScale:scale] : [UITraitCollection traitCollectionWithDisplayScale:scale];
 }
 
-+ (instancetype)traitCollectionWithHorizontalSizeClass:(UIUserInterfaceSizeClass)horizontalSizeClass {
-    return [[self alloc] initWithHorizontalSizeClass:horizontalSizeClass];
++ (UITraitCollection *)traitCollectionWithHorizontalSizeClass:(UIUserInterfaceSizeClass)horizontalSizeClass {
+    return _iOS7 ? [[self alloc] initWithHorizontalSizeClass:horizontalSizeClass]
+                 : [UITraitCollection traitCollectionWithHorizontalSizeClass:horizontalSizeClass];
 }
 
-+ (instancetype)traitCollectionWithVerticalSizeClass:(UIUserInterfaceSizeClass)verticalSizeClass {
-    return [[self alloc] initWithVerticalSizeClass:verticalSizeClass];
++ (UITraitCollection *)traitCollectionWithVerticalSizeClass:(UIUserInterfaceSizeClass)verticalSizeClass {
+    return _iOS7 ? [[self alloc] initWithVerticalSizeClass:verticalSizeClass] : [UITraitCollection traitCollectionWithVerticalSizeClass:verticalSizeClass];
 }
 
-+ (instancetype)traitCollectionWithTraitsFromCollections:(NSArray *)traitCollections {
-    CGFloat scale = 0.0;
-    UIUserInterfaceIdiom idiom = UIUserInterfaceIdiomUnspecified;
-    UIUserInterfaceSizeClass horizontalSizeClass = UIUserInterfaceSizeClassUnspecified;
-    UIUserInterfaceSizeClass verticalSizeClass = UIUserInterfaceSizeClassUnspecified;
++ (UITraitCollection *)traitCollectionWithTraitsFromCollections:(NSArray *)traitCollections {
+    if (_iOS7) {
+        CGFloat scale = 0.0;
+        UIUserInterfaceIdiom idiom = UIUserInterfaceIdiomUnspecified;
+        UIUserInterfaceSizeClass horizontalSizeClass = UIUserInterfaceSizeClassUnspecified;
+        UIUserInterfaceSizeClass verticalSizeClass = UIUserInterfaceSizeClassUnspecified;
 
-    for (DDTraitCollection *traitCollection in traitCollections) {
-        if (traitCollection.displayScale != 0.0) {
-            scale = traitCollection.displayScale;
+        for (DDTraitCollection *traitCollection in traitCollections) {
+            if (traitCollection.displayScale != 0.0) {
+                scale = traitCollection.displayScale;
+            }
+
+            if (traitCollection.userInterfaceIdiom != UIUserInterfaceIdiomUnspecified) {
+                idiom = traitCollection.userInterfaceIdiom;
+            }
+
+            if (traitCollection.horizontalSizeClass != UIUserInterfaceSizeClassUnspecified) {
+                horizontalSizeClass = traitCollection.horizontalSizeClass;
+            }
+
+            if (traitCollection.verticalSizeClass != UIUserInterfaceSizeClassUnspecified) {
+                verticalSizeClass = traitCollection.verticalSizeClass;
+            }
         }
 
-        if (traitCollection.userInterfaceIdiom != UIUserInterfaceIdiomUnspecified) {
-            idiom = traitCollection.userInterfaceIdiom;
-        }
-
-        if (traitCollection.horizontalSizeClass != UIUserInterfaceSizeClassUnspecified) {
-            horizontalSizeClass = traitCollection.horizontalSizeClass;
-        }
-
-        if (traitCollection.verticalSizeClass != UIUserInterfaceSizeClassUnspecified) {
-            verticalSizeClass = traitCollection.verticalSizeClass;
-        }
-    }
-
-    return [[self alloc] initWithUserInterfaceIdiom:idiom displayScale:scale horizontalSizeClass:horizontalSizeClass verticalSizeClass:verticalSizeClass];
+        return (UITraitCollection *)
+            [[self alloc] initWithUserInterfaceIdiom:idiom displayScale:scale horizontalSizeClass:horizontalSizeClass verticalSizeClass:verticalSizeClass];
+    } else { return [UITraitCollection traitCollectionWithTraitsFromCollections:traitCollections]; }
 }
 
 + (instancetype)traitCollectionForCurrentEnvironment {

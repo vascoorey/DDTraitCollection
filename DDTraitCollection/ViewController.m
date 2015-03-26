@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIViewController+DDTraitCollection.h"
+#import "DDTraitCollection.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,18 @@
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     NSLog(@"Old: %@", previousTraitCollection);
     NSLog(@"New: %@", self.traitCollection);
+}
+
+- (void)updateViewConstraints {
+    UITraitCollection *currentTraitCollection = self.traitCollection;
+
+    if (currentTraitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+        // Do stuff for compact
+    } else if (currentTraitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
+        // Do stuff for regular
+    }
+
+    [super updateViewConstraints];
 }
 
 @end
