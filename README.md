@@ -11,6 +11,10 @@ Currently the following API should be available to iOS 7:
 * `-traitCollectionDidChange:` - This method will be called in any iOS 7 `view` or `viewController` that has previously called `-dd_registerForTraitCollectionUpdates`
 
 # Example
+First and foremost, you should `#import <DDTraitCollection/UIView[Controller]+DDTraitCollection.h>` in any files where you would like to access the `traitCollection`
+
+If you would like to create `UITraitCollection` (or `DDTraitCollection`) instances, you should `#import <DDTraitCollection/DDTraitCollection.h>`
+
 Here is a quick example of how you could use this:
 
 ```objc
