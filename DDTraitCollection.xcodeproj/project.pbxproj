@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9B0F3B1AC2D4FC002889E5 /* DDTraitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9B0F3A1AC2D4FC002889E5 /* DDTraitCollection.m */; };
+		DCAF92291AC2FAFC0008181F /* DDTraitCollectionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAF92281AC2FAFC0008181F /* DDTraitCollectionObserver.m */; };
+		DCAF922C1AC2FBBE0008181F /* UIView+DDTraitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAF922B1AC2FBBE0008181F /* UIView+DDTraitCollection.m */; };
 		DCF14C8A1AC07641008BAE69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF14C891AC07641008BAE69 /* main.m */; };
 		DCF14C8D1AC07641008BAE69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF14C8C1AC07641008BAE69 /* AppDelegate.m */; };
 		DCF14C901AC07641008BAE69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF14C8F1AC07641008BAE69 /* ViewController.m */; };
@@ -14,6 +17,7 @@
 		DCF14C951AC07641008BAE69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF14C941AC07641008BAE69 /* Images.xcassets */; };
 		DCF14C981AC07641008BAE69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF14C961AC07641008BAE69 /* LaunchScreen.xib */; };
 		DCF14CA41AC07641008BAE69 /* DDTraitCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF14CA31AC07641008BAE69 /* DDTraitCollectionTests.m */; };
+		DCF14CB01AC07664008BAE69 /* UIViewController+DDTraitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF14CAF1AC07664008BAE69 /* UIViewController+DDTraitCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B5267652800A03C9C2B4232 /* Pods-DDTraitCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTraitCollection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDTraitCollection/Pods-DDTraitCollection.debug.xcconfig"; sourceTree = "<group>"; };
+		A7E222F6F7B65E614A0F0917 /* Pods-DDTraitCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTraitCollection.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDTraitCollection/Pods-DDTraitCollection.release.xcconfig"; sourceTree = "<group>"; };
+		DC9B0F391AC2D4FC002889E5 /* DDTraitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTraitCollection.h; sourceTree = "<group>"; };
+		DC9B0F3A1AC2D4FC002889E5 /* DDTraitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTraitCollection.m; sourceTree = "<group>"; };
+		DCAF92271AC2FAFC0008181F /* DDTraitCollectionObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTraitCollectionObserver.h; sourceTree = "<group>"; };
+		DCAF92281AC2FAFC0008181F /* DDTraitCollectionObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTraitCollectionObserver.m; sourceTree = "<group>"; };
+		DCAF922A1AC2FBBE0008181F /* UIView+DDTraitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDTraitCollection.h"; sourceTree = "<group>"; };
+		DCAF922B1AC2FBBE0008181F /* UIView+DDTraitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDTraitCollection.m"; sourceTree = "<group>"; };
 		DCF14C841AC07640008BAE69 /* DDTraitCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDTraitCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF14C881AC07640008BAE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF14C891AC07641008BAE69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +52,9 @@
 		DCF14C9D1AC07641008BAE69 /* DDTraitCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDTraitCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF14CA21AC07641008BAE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF14CA31AC07641008BAE69 /* DDTraitCollectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDTraitCollectionTests.m; sourceTree = "<group>"; };
+		DCF14CAE1AC07664008BAE69 /* UIViewController+DDTraitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDTraitCollection.h"; sourceTree = "<group>"; };
+		DCF14CAF1AC07664008BAE69 /* UIViewController+DDTraitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDTraitCollection.m"; sourceTree = "<group>"; };
+		FEAFA9A5D2D790F235FB1416 /* libPods-DDTraitCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDTraitCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +75,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E6AD50F62367C6B4B602638 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B5267652800A03C9C2B4232 /* Pods-DDTraitCollection.debug.xcconfig */,
+				A7E222F6F7B65E614A0F0917 /* Pods-DDTraitCollection.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C36C83F58C7D9322A83848CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEAFA9A5D2D790F235FB1416 /* libPods-DDTraitCollection.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCF14C7B1AC07640008BAE69 = {
 			isa = PBXGroup;
 			children = (
+				DCF14CAD1AC0764E008BAE69 /* Source */,
 				DCF14C861AC07640008BAE69 /* DDTraitCollection */,
 				DCF14CA01AC07641008BAE69 /* DDTraitCollectionTests */,
 				DCF14C851AC07640008BAE69 /* Products */,
+				6E6AD50F62367C6B4B602638 /* Pods */,
+				C36C83F58C7D9322A83848CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +152,21 @@
 				DCF14CA21AC07641008BAE69 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCF14CAD1AC0764E008BAE69 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DCF14CAE1AC07664008BAE69 /* UIViewController+DDTraitCollection.h */,
+				DCF14CAF1AC07664008BAE69 /* UIViewController+DDTraitCollection.m */,
+				DCAF922A1AC2FBBE0008181F /* UIView+DDTraitCollection.h */,
+				DCAF922B1AC2FBBE0008181F /* UIView+DDTraitCollection.m */,
+				DC9B0F391AC2D4FC002889E5 /* DDTraitCollection.h */,
+				DC9B0F3A1AC2D4FC002889E5 /* DDTraitCollection.m */,
+				DCAF92271AC2FAFC0008181F /* DDTraitCollectionObserver.h */,
+				DCAF92281AC2FAFC0008181F /* DDTraitCollectionObserver.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9B0F3B1AC2D4FC002889E5 /* DDTraitCollection.m in Sources */,
 				DCF14C901AC07641008BAE69 /* ViewController.m in Sources */,
 				DCF14C8D1AC07641008BAE69 /* AppDelegate.m in Sources */,
+				DCAF922C1AC2FBBE0008181F /* UIView+DDTraitCollection.m in Sources */,
 				DCF14C8A1AC07641008BAE69 /* main.m in Sources */,
+				DCAF92291AC2FAFC0008181F /* DDTraitCollectionObserver.m in Sources */,
+				DCF14CB01AC07664008BAE69 /* UIViewController+DDTraitCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DDTraitCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DDTraitCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +470,7 @@
 				DCF14CA91AC07641008BAE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCF14CAA1AC07641008BAE69 /* Build configuration list for PBXNativeTarget "DDTraitCollectionTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +479,7 @@
 				DCF14CAC1AC07641008BAE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

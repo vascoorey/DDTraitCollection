@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+DDTraitCollection.h"
 
 @interface ViewController ()
 
@@ -17,11 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%@", self.traitCollection);
+    [self dd_registerForTraitCollectionUpdates];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    NSLog(@"Old: %@", previousTraitCollection);
+    NSLog(@"New: %@", self.traitCollection);
 }
 
 @end
